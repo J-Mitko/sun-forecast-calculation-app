@@ -1,6 +1,6 @@
 # sun-forecast-calculation-app
 
-App that gets weather forecast data from the openweatthermap and calculates how much sunshine will be.
+App that gets weather forecast data from the openweathermap and calculates how much sunshine will be.
 
 The program requires to input user openweathermap api key, latitude and longitude for the location where the calculations to be performed.
 
