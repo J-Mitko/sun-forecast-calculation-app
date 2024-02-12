@@ -11,9 +11,9 @@ namespace sun_forecast_calculation_app.Calculator
 
         public SunIrradiationData getSunIrradians(double sunZenith, double airmass, double transmittens)
         {
-            sunIrradiance.dni = dni_extra * Math.Pow(transmittens, airmass);
-            sunIrradiance.dhi = 0.3 * (1.0 - Math.Pow(transmittens,airmass)) * dni_extra * sunZenith;
-            sunIrradiance.ghi = sunIrradiance.dhi + sunIrradiance.dni * sunZenith;
+            sunIrradiance.dni = Math.Round(dni_extra * Math.Pow(transmittens, airmass),2);
+            sunIrradiance.dhi = Math.Round(0.3 * (1.0 - Math.Pow(transmittens,airmass)) * dni_extra * sunZenith, 2);
+            sunIrradiance.ghi = Math.Round(sunIrradiance.dhi + sunIrradiance.dni * sunZenith, 2);
 
             return sunIrradiance;
         }
