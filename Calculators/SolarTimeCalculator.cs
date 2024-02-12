@@ -21,7 +21,7 @@ namespace sun_forecast_calculation_app.Calculators
             int hour = getHour(currentTime);
             int localStandartTimeMeridian = getLocalStandartTimeMeridian(timezone);
 
-            return hour + this.timeCorrectionCalculator.calculateTimeCorrenction(longitude, localStandartTimeMeridian, dayOfYear);
+            return hour + this.timeCorrectionCalculator.calculateTimeCorrenction(longitude, localStandartTimeMeridian, dayOfYear) / 60;
         }
         private int getTimezone(long currentTime)
         {
@@ -33,7 +33,7 @@ namespace sun_forecast_calculation_app.Calculators
         }
         private static int getLocalStandartTimeMeridian(int timezone)
         {
-            return 15 * timezone;
+            return 15 * Math.Abs(timezone);
         }
 
     }

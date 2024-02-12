@@ -9,10 +9,14 @@ namespace sun_forecast_calculation_app.Calculators
 {
     internal class SunZenitCalculator : ISunZenitCalculator
     {
-        public double calculateCosinSunZenith(double latitude, double sunDeclination, double hourAngle)
+        public double calculateSunZenith(double latitude, double sunDeclination, double hourAngle)
         {
-            return Math.Asin(Math.Sin(DegRad.DegreesToRadians(latitude)) * Math.Sin(DegRad.DegreesToRadians(sunDeclination))
-                + Math.Cos(DegRad.DegreesToRadians(latitude)) * Math.Cos(DegRad.DegreesToRadians(sunDeclination)) * Math.Cos(DegRad.DegreesToRadians(hourAngle)));
+            return 90 - DegRad.RadiansToDegrees(Math.Round(Math.Asin(
+                Math.Sin(DegRad.DegreesToRadians(latitude))
+                * Math.Sin(DegRad.DegreesToRadians(sunDeclination))
+                + Math.Cos(DegRad.DegreesToRadians(latitude))
+                * Math.Cos(DegRad.DegreesToRadians(sunDeclination))
+                * Math.Cos(DegRad.DegreesToRadians(hourAngle))), 2));
         }
     }
 }

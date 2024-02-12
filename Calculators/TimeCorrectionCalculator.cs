@@ -11,7 +11,7 @@ namespace sun_forecast_calculation_app.Calculators
     {
         public double calculateTimeCorrenction(double longitude, int localStandartTimeMeridian, int dayOfYear)
         {
-            return (4 * (longitude - localStandartTimeMeridian)) + calculateEoT(dayOfYear) / 60;
+            return (4 * (longitude - localStandartTimeMeridian)) + calculateEoT(dayOfYear);
         }
         public double calculateEoT(int dayOfYear)
         {

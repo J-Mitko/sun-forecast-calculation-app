@@ -4,17 +4,17 @@
   "cnt": 40,
   "list": [
     {
-      "dt": 1700546400,
+      "dt": 1707652800,
       "main": {
-        "temp": 271.94,
-        "feels_like": 271.94,
-        "temp_min": 271.94,
-        "temp_max": 278.95,
-        "pressure": 1015,
-        "sea_level": 1015,
-        "grnd_level": 948,
-        "humidity": 100,
-        "temp_kf": -7.01
+        "temp": 287.97,
+        "feels_like": 286.63,
+        "temp_min": 287.97,
+        "temp_max": 287.97,
+        "pressure": 1003,
+        "sea_level": 1003,
+        "grnd_level": 939,
+        "humidity": 43,
+        "temp_kf": 0
       },
       "weather": [
         {
@@ -25,19 +25,19 @@
         }
       ],
       "clouds": {
-        "all": 86
+        "all": 100
       },
       "wind": {
-        "speed": 0.55,
-        "deg": 161,
-        "gust": 0.66
+        "speed": 2.56,
+        "deg": 171,
+        "gust": 8.33
       },
       "visibility": 10000,
       "pop": 0,
       "sys": {
         "pod": "d"
       },
-      "dt_txt": "2023-11-21 06:00:00"
+      "dt_txt": "2024-02-11 12:00:00"
     }
   ]
 }
