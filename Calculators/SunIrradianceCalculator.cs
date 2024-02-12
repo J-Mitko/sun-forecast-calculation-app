@@ -42,11 +42,13 @@ namespace sun_forecast_calculation_app.Calculators
                 double solarTime = solarTimeCalculator.calculateSolarTime(wf.dt, longitude, dayOfYear);
                 double hourAngle = hourAngleCalculator.calculateHourAngle(solarTime);
                 double cosSunZenith = Math.Cos(DegRad.DegreesToRadians(sunZenitCalculator.calculateSunZenith(latitude, sunDeclination, hourAngle)));
-                double airmass = airmassCalculator.calculateAirmass(cosSunZenith, wf.main.pressure, wf.main.sea_level);
+                if( cosSunZenith > 0)
+                {
+                    double airmass = airmassCalculator.calculateAirmassAbsolute(cosSunZenith, wf.main.pressure, wf.main.sea_level);
+                    var result = irradCalculator.calculateIrradians(cosSunZenith, airmass, transmittens);
 
-                var result = irradCalculator.calculateIrradians(cosSunZenith, airmass, transmittens);
-
-                Console.WriteLine(wf.dt_txt + " -> dhi: " + result.dhi + " dni: " + result.dni + " ghi: " + result.ghi);
+                    Console.WriteLine(wf.dt_txt + " -> dhi: " + result.dhi + " dni: " + result.dni + " ghi: " + result.ghi);
+                }
             });
         }
     }
