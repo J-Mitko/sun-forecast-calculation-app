@@ -14,7 +14,6 @@ IHost builder = Host.CreateDefaultBuilder().ConfigureServices(services =>
     services.AddSingleton<IIrradianceCalculator, IrradianceCalculator>();
     services.AddSingleton<ISolarTimeCalculator, SolarTimeCalculator>();
     services.AddSingleton<ISunDeclinationCalculator, SunDeclinationCalculator>();
-    services.AddSingleton<ISunriseCalculator, SunriseCalculator>();
     services.AddSingleton<ISunZenitCalculator, SunZenitCalculator>();
     services.AddSingleton<ITimeCorrectionCalculator, TimeCorrectionCalculator>();
     services.AddSingleton<ISunIrradianceCalculator, SunIrradianceCalculator>();
