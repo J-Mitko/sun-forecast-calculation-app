@@ -4,40 +4,40 @@
   "cnt": 40,
   "list": [
     {
-      "dt": 1707652800,
+      "dt": 1707663600,
       "main": {
-        "temp": 287.97,
-        "feels_like": 286.63,
-        "temp_min": 287.97,
-        "temp_max": 287.97,
-        "pressure": 1003,
-        "sea_level": 1003,
-        "grnd_level": 939,
-        "humidity": 43,
+        "temp": 286.72,
+        "feels_like": 285.54,
+        "temp_min": 286.72,
+        "temp_max": 286.72,
+        "pressure": 1002,
+        "sea_level": 1002,
+        "grnd_level": 938,
+        "humidity": 54,
         "temp_kf": 0
       },
       "weather": [
         {
-          "id": 804,
+          "id": 801,
           "main": "Clouds",
-          "description": "overcast clouds",
-          "icon": "04d"
+          "description": "few clouds",
+          "icon": "02d"
         }
       ],
       "clouds": {
-        "all": 100
+        "all": 17
       },
       "wind": {
-        "speed": 2.56,
-        "deg": 171,
-        "gust": 8.33
+        "speed": 1.58,
+        "deg": 135,
+        "gust": 4.96
       },
       "visibility": 10000,
-      "pop": 0,
+      "pop": 0.02,
       "sys": {
         "pod": "d"
       },
-      "dt_txt": "2024-02-11 12:00:00"
+      "dt_txt": "2024-02-11 15:00:00"
     }
   ]
 }
