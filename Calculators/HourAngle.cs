@@ -7,9 +7,9 @@ using sun_forecast_calculation_app.Calculators.Contracts;
 
 namespace sun_forecast_calculation_app.Calculators
 {
-    internal class HourAngleCalculator : IHourAngleCalculator
+    internal class HourAngle : IHourAngle
     {
-        public double calculateHourAngle(double solarTime)
+        public double getHourAngle(double solarTime)
         {
             return 15 * (solarTime - 12);
         }

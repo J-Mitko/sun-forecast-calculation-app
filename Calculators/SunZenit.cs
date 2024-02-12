@@ -7,9 +7,9 @@ using sun_forecast_calculation_app.Calculators.Contracts;
 
 namespace sun_forecast_calculation_app.Calculators
 {
-    internal class SunZenitCalculator : ISunZenitCalculator
+    internal class SunZenit : ISunZenit
     {
-        public double calculateSunZenith(double latitude, double sunDeclination, double hourAngle)
+        public double getSunZenithAngle(double latitude, double sunDeclination, double hourAngle)
         {
             return 90 - DegRad.RadiansToDegrees(Math.Round(Math.Asin(
                 Math.Sin(DegRad.DegreesToRadians(latitude))

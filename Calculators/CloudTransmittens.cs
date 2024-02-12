@@ -2,11 +2,11 @@
 
 namespace sun_forecast_calculation_app.Calculators
 {
-    internal class CloudTransmittensCalculator : ICloudTransmittensCalculator
+    internal class CloudTransmittens : ICloudTransmittens
     {
 
         private const double OFFSET = 0.75;
-        public double calculateTransmittens(int cloudCover)
+        public double getAtmosphereTransmittens(int cloudCover)
         {
             return ((100.0 - cloudCover) / 100.0) * OFFSET;
         }

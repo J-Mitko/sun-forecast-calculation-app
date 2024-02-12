@@ -7,21 +7,21 @@ using sun_forecast_calculation_app.Calculators.Contracts;
 
 namespace sun_forecast_calculation_app.Calculators
 {
-    internal class SolarTimeCalculator : ISolarTimeCalculator
+    internal class SolarTime : ISolarTime
     {
-        private readonly ITimeCorrectionCalculator timeCorrectionCalculator;
-        public SolarTimeCalculator(ITimeCorrectionCalculator timeCorrectionCalculator)
+        private readonly ITimeCorrection timeCorrectionCalculator;
+        public SolarTime(ITimeCorrection timeCorrectionCalculator)
         {
             this.timeCorrectionCalculator = timeCorrectionCalculator;
         }
 
-        public double calculateSolarTime(long currentTime, double longitude, int dayOfYear)
+        public double getSolarTime(long currentTime, double longitude, int dayOfYear)
         {
             int timezone = getTimezone(currentTime);
             int hour = getHour(currentTime);
             int localStandartTimeMeridian = getLocalStandartTimeMeridian(timezone);
 
-            return hour + this.timeCorrectionCalculator.calculateTimeCorrenction(longitude, localStandartTimeMeridian, dayOfYear) / 60;
+            return hour + this.timeCorrectionCalculator.getTimeCorrenction(longitude, localStandartTimeMeridian, dayOfYear) / 60;
         }
         private int getTimezone(long currentTime)
         {

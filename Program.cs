@@ -8,18 +8,18 @@ using System.Text.Json;
 
 IHost builder = Host.CreateDefaultBuilder().ConfigureServices(services =>
 {
-    services.AddSingleton<IAirmassCalculator, AirmassCalculator>();
-    services.AddSingleton<ICloudTransmittensCalculator, CloudTransmittensCalculator>();
-    services.AddSingleton<IHourAngleCalculator, HourAngleCalculator>();
-    services.AddSingleton<IIrradianceCalculator, IrradianceCalculator>();
-    services.AddSingleton<ISolarTimeCalculator, SolarTimeCalculator>();
-    services.AddSingleton<ISunDeclinationCalculator, SunDeclinationCalculator>();
-    services.AddSingleton<ISunZenitCalculator, SunZenitCalculator>();
-    services.AddSingleton<ITimeCorrectionCalculator, TimeCorrectionCalculator>();
-    services.AddSingleton<ISunIrradianceCalculator, SunIrradianceCalculator>();
+    services.AddSingleton<IAirmass, Airmass>();
+    services.AddSingleton<ICloudTransmittens, CloudTransmittens>();
+    services.AddSingleton<IHourAngle, HourAngle>();
+    services.AddSingleton<IIrradiance, Irradiance>();
+    services.AddSingleton<ISolarTime, SolarTime>();
+    services.AddSingleton<ISunDeclination, SunDeclination>();
+    services.AddSingleton<ISunZenit, SunZenit>();
+    services.AddSingleton<ITimeCorrection, TimeCorrection>();
+    services.AddSingleton<ISunIrradiance, SunIrradiance>();
 }).Build();
 
-var app = builder.Services.GetRequiredService<ISunIrradianceCalculator>();
+var app = builder.Services.GetRequiredService<ISunIrradiance>();
 string apiKey = String.Empty;
 double latitude = 0f;
 double longitude = 0f;

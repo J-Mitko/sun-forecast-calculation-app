@@ -7,13 +7,13 @@ using sun_forecast_calculation_app.Calculators.Contracts;
 
 namespace sun_forecast_calculation_app.Calculators
 {
-    public class TimeCorrectionCalculator : ITimeCorrectionCalculator
+    public class TimeCorrection : ITimeCorrection
     {
-        public double calculateTimeCorrenction(double longitude, int localStandartTimeMeridian, int dayOfYear)
+        public double getTimeCorrenction(double longitude, int localStandartTimeMeridian, int dayOfYear)
         {
-            return (4 * (longitude - localStandartTimeMeridian)) + calculateEoT(dayOfYear);
+            return (4 * (longitude - localStandartTimeMeridian)) + getEoT(dayOfYear);
         }
-        public double calculateEoT(int dayOfYear)
+        public double getEoT(int dayOfYear)
         {
             double b = 360 * (dayOfYear - 81) / 365;
             return 9.87 * Math.Sin(DegRad.DegreesToRadians(2 * b)) - 7.67 * Math.Cos(DegRad.DegreesToRadians(b)) - 1.5 * Math.Sin(DegRad.DegreesToRadians(b)); 

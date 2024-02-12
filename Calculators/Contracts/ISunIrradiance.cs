@@ -2,7 +2,7 @@
 
 namespace sun_forecast_calculation_app.Calculators.Contracts
 {
-    internal interface ISunIrradianceCalculator
+    internal interface ISunIrradiance
     {
         void calculateSunIrradiance(WeatherResponse weather, double longitude, double latitude);
     }

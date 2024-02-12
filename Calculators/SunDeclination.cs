@@ -7,9 +7,9 @@ using sun_forecast_calculation_app.Calculators.Contracts;
 
 namespace sun_forecast_calculation_app.Calculators
 {
-    internal class SunDeclinationCalculator : ISunDeclinationCalculator
+    internal class SunDeclination : ISunDeclination
     {
-        public double calculateSunDeclination(int dayOfYear)
+        public double getSunDeclination(int dayOfYear)
         {
             double a = Math.Round(360d / 365 * (dayOfYear + 10), 2);
 
