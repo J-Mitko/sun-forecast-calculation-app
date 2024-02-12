@@ -11,9 +11,9 @@ namespace sun_forecast_calculation_app.Calculators
     {
         public double calculateSunDeclination(int dayOfYear)
         {
-            double a = 360d / 365 * (dayOfYear + 10);
+            double a = Math.Round(360d / 365 * (dayOfYear + 10), 2);
 
-            return 23.44 * Math.Sin(DegRad.DegreesToRadians(a));
+            return -23.45 * Math.Round(Math.Cos(DegRad.DegreesToRadians(a)), 2);
         }
     }
 }

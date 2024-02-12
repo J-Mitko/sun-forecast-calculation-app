@@ -2,6 +2,6 @@
 {
     internal interface ISunZenitCalculator
     {
-        double calculateCosinSunZenith(double latitude, double sunDeclination, double hourAngle);
+        double calculateSunZenith(double latitude, double sunDeclination, double hourAngle);
     }
 }
