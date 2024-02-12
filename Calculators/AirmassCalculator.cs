@@ -9,9 +9,14 @@ namespace sun_forecast_calculation_app.Calculators
 {
     internal class AirmassCalculator : IAirmassCalculator
     {
-        public double calculateAirmass(double sunZenith, double localPressure, double seaLevelPresure)
+        public double calculateAirmassAbsolute(double cosSunZenith, double localPressure, double seaLevelPresure)
         {
-            return 1 / sunZenith * localPressure / seaLevelPresure;
+            return calculateAirmassRelative(cosSunZenith) * localPressure / seaLevelPresure;
+        }
+
+        private double calculateAirmassRelative(double cosSunZenith) 
+        {
+            return 1 / cosSunZenith;
         }
     }
 }

@@ -2,6 +2,6 @@
 {
     internal interface IAirmassCalculator
     {
-        double calculateAirmass(double sunZenith, double localPressure, double seaLevelPresure);
+        double calculateAirmassAbsolute(double sunZenith, double localPressure, double seaLevelPresure);
     }
 }
